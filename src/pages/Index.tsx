@@ -11,7 +11,7 @@ const products = [
     id: 1,
     name: 'Промышленное оборудование A100',
     category: 'Станки',
-    image: '/placeholder.svg',
+    image: 'https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/54b4775d-275e-4dcb-b69a-10314def41ec.jpg',
     power: '15 кВт',
     weight: '2500 кг',
     precision: '0.001 мм',
@@ -21,7 +21,7 @@ const products = [
     id: 2,
     name: 'Обрабатывающий центр B200',
     category: 'Станки',
-    image: '/placeholder.svg',
+    image: 'https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/54b4775d-275e-4dcb-b69a-10314def41ec.jpg',
     power: '22 кВт',
     weight: '3500 кг',
     precision: '0.0005 мм',
@@ -31,7 +31,7 @@ const products = [
     id: 3,
     name: 'Система автоматизации C300',
     category: 'Автоматизация',
-    image: '/placeholder.svg',
+    image: 'https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/46b5fe03-2686-484a-a33b-5b55655cd14e.jpg',
     power: '5 кВт',
     weight: '500 кг',
     precision: 'N/A',
@@ -41,7 +41,7 @@ const products = [
     id: 4,
     name: 'Конвейерная линия D400',
     category: 'Логистика',
-    image: '/placeholder.svg',
+    image: 'https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/46b5fe03-2686-484a-a33b-5b55655cd14e.jpg',
     power: '10 кВт',
     weight: '1500 кг',
     precision: 'N/A',
@@ -51,7 +51,7 @@ const products = [
     id: 5,
     name: 'Токарный станок E500',
     category: 'Станки',
-    image: '/placeholder.svg',
+    image: 'https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/54b4775d-275e-4dcb-b69a-10314def41ec.jpg',
     power: '18 кВт',
     weight: '2800 кг',
     precision: '0.002 мм',
@@ -61,7 +61,7 @@ const products = [
     id: 6,
     name: 'Робототехнический комплекс F600',
     category: 'Автоматизация',
-    image: '/placeholder.svg',
+    image: 'https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/46b5fe03-2686-484a-a33b-5b55655cd14e.jpg',
     power: '8 кВт',
     weight: '800 кг',
     precision: '0.01 мм',
@@ -115,11 +115,17 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Icon name="Factory" size={24} className="text-primary-foreground" />
-              </div>
-              <span className="text-2xl font-bold text-primary">Нелден Индастри</span>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/files/5e07de1b-51e6-496f-a0f6-eeaaf347bf6d.png" 
+                alt="Nelden Industry Logo" 
+                className="h-10 w-10 object-contain"
+              />
+              <img 
+                src="https://cdn.poehali.dev/files/1ba42836-a64d-4a99-a569-f90fb37006e3.png" 
+                alt="Nelden" 
+                className="h-7 object-contain"
+              />
             </div>
             <nav className="hidden md:flex items-center gap-6">
               <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors font-medium">
@@ -188,7 +194,7 @@ export default function Index() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent rounded-2xl"></div>
                 <img 
-                  src="/placeholder.svg" 
+                  src="https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/54b4775d-275e-4dcb-b69a-10314def41ec.jpg" 
                   alt="Промышленное оборудование" 
                   className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
                 />
@@ -306,7 +312,7 @@ export default function Index() {
             </div>
             <div className="animate-fade-in">
               <img 
-                src="/placeholder.svg" 
+                src="https://cdn.poehali.dev/projects/f78d8f22-1f18-48b4-9a50-06a27356b1e9/files/c7495e1e-3f3b-4a4b-90c8-3a523b8658ae.jpg" 
                 alt="О компании" 
                 className="rounded-xl shadow-lg w-full h-[500px] object-cover"
               />
@@ -623,11 +629,12 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-                  <Icon name="Factory" size={24} className="text-white" />
-                </div>
-                <span className="text-xl font-bold">Нелден Индастри</span>
+              <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src="https://cdn.poehali.dev/files/5dfde240-9c39-4de8-a7c8-0e2f34cdad86.png" 
+                  alt="Nelden Industry" 
+                  className="h-8 object-contain brightness-0 invert"
+                />
               </div>
               <p className="text-white/80 text-sm">
                 Надежный партнер в области промышленного оборудования и автоматизации
